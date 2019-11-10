@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
-#define buttonGo 7
 
 #include <Wire.h>
 #include <Adafruit_BMP280.h>
 Adafruit_BMP280 bmp; // I2C
+#define buttonGo 7
 float newZero = 0;
 float pres = 0;
 float mini = 9999999999;
@@ -22,6 +22,7 @@ byte initi = 0;
 unsigned long timeStart;
 unsigned long timeApog;
 
+float average_pres(byte n)
 
 //status of the state machine
 typedef enum  {
